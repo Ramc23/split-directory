@@ -16,10 +16,12 @@ def split_dir(abs_dirname, N):
             if i % N == 0:            
                 subdir_name = os.path.join(abs_dirname, '{0:03d}'.format(int(i / N + 1)))
                 os.mkdir(subdir_name)
+                print("Created sub directories "+ subdir_name)
 
             # move file to current dir
             f_base = os.path.basename(f)
             shutil.move(f, os.path.join(subdir_name, f_base))
+            print("Moved File "+ f_base + " into sub directory "+ subdir_name)
             i += 1
 
 def split_fixed_dir(abs_dirname, dir_count):
