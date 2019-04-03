@@ -13,3 +13,7 @@ This script helps to spilt a folder /directory with large number of files into s
     (say if number of sub directories is fixed at 5, then the files present will be equally distributed among them)
 2. Based on files to be placed in each sub directory
     (Say if files to be in each directory is fixed at 5, then sub-directories will be created accordingly)
+
+## Usage
+
+python split-directory.py  /home/dev/test 1 5
