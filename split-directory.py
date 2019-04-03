@@ -33,6 +33,7 @@ def split_fixed_dir(abs_dirname, dir_count):
     while (i <= dir_count):
         subdir_name = os.path.join(abs_dirname + '{0:03d}'.format(i))
         os.mkdir(subdir_name)
+        print("Created sub directories "+ subdir_name)
         i = i+1
     j = 1
 
@@ -47,6 +48,7 @@ def split_fixed_dir(abs_dirname, dir_count):
             # move file to current dir
             shutil.move(f, curr_subdir)
             j += 1
+            print("Moved File "+ os.path.basename(f) + " into sub directory "+ curr_subdir)
 
 
 def parse_args():
